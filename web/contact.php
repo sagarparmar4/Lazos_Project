@@ -35,14 +35,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="header_top-sec">
 			<div class="top_right">
 				<ul>
-					<li><a href="about.html">About</a></li>|
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="about.php">About</a></li>|
+					<li><a href="contact.php">Contact</a></li>
 				</ul>
 			</div>
 			<div class="top_left">
 				<ul>
 					<li class="top_link">Email:<a href="mailto:info@example.com">lazoskarma@gmail.com</a></li>
-					<!--<li class="top_link"><a href="login.html">My Account</a></li>-->					
+					<!--<li class="top_link"><a href="login.php">My Account</a></li>-->					
 				</ul>
 			</div>
 				<div class="clearfix"> </div>
@@ -53,62 +53,62 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	 <div class="header-bottom">
 		 <div class="container">			
 				<div class="logo">
-					<a href="index.html"><h1>Lazos Karma</h1></a>
+					<a href="index.php"><h1>Lazos Karma</h1></a>
 				</div>
 			 <!---->
 		 
 			 <div class="top-nav">
-				<ul class="memenu skyblue"><li class="grid"><a href="index.html">Home</a></li>
-					<li class="grid"><a href="#">Our Products</a>
+				<ul class="memenu skyblue"><li class="grid"><a href="index.php">Home</a></li>
+					<li class="grid"><a>Our Products</a>
 						<div class="mepanel">
 							<div class="row">
 								<div class="col1 me-one">
 									<!--<h4>Shop</h4>-->
 									<ul>
-										<li><a href="kurta.html">Kurta</a></li>
-										<li><a href="mokhu.html">Mokhu</a></li>
-										<li><a href="jacket.html">Jacket</a></li>
-										<li><a href="jacket_kurta.html">Jacket-kurta</a></li>
-										<li><a href="semi_indo.html">Semi Indo-Western</a></li>
+										<li><a href="kurta.php">Kurta</a></li>
+										<li><a href="mokhu.php">Mokhu</a></li>
+										<li><a href="jacket.php">Jacket</a></li>
+										<li><a href="jacket_kurta.php">Jacket-kurta</a></li>
+										<li><a href="semi_indo.php">Semi Indo-Western</a></li>
 										
 									</ul>
 								</div>
 								<!--<div class="col1 me-one">
 									<h4>Style Zone</h4>
 									<ul>
-										<li><a href="product.html">Men</a></li>
-										<li><a href="product.html">Women</a></li>
-										<li><a href="product.html">Brands</a></li>
-										<li><a href="product.html">Kids</a></li>
-										<li><a href="product.html">Accessories</a></li>
-										<li><a href="product.html">Style Videos</a></li>
+										<li><a href="product.php">Men</a></li>
+										<li><a href="product.php">Women</a></li>
+										<li><a href="product.php">Brands</a></li>
+										<li><a href="product.php">Kids</a></li>
+										<li><a href="product.php">Accessories</a></li>
+										<li><a href="product.php">Style Videos</a></li>
 									</ul>	
 								</div>
 								<div class="col1 me-one">
 									<h4>Popular Brands</h4>
 									<ul>
-										<li><a href="product.html">Levis</a></li>
-										<li><a href="product.html">Persol</a></li>
-										<li><a href="product.html">Nike</a></li>
-										<li><a href="product.html">Edwin</a></li>
-										<li><a href="product.html">New Balance</a></li>
-										<li><a href="product.html">Jack & Jones</a></li>
-										<li><a href="product.html">Paul Smith</a></li>
-										<li><a href="product.html">Ray-Ban</a></li>
-										<li><a href="product.html">Wood Wood</a></li>
+										<li><a href="product.php">Levis</a></li>
+										<li><a href="product.php">Persol</a></li>
+										<li><a href="product.php">Nike</a></li>
+										<li><a href="product.php">Edwin</a></li>
+										<li><a href="product.php">New Balance</a></li>
+										<li><a href="product.php">Jack & Jones</a></li>
+										<li><a href="product.php">Paul Smith</a></li>
+										<li><a href="product.php">Ray-Ban</a></li>
+										<li><a href="product.php">Wood Wood</a></li>
 									</ul>	
 								</div>-->
 							</div>
 						</div>
 					</li>
-					<li class="grid"><a href="about.html">About Us</a></li>
-					<li class="active"><a href="contact.html">Contact</a></li>
+					<li class="grid"><a href="about.php">About Us</a></li>
+					<li class="active"><a href="contact.php">Contact</a></li>
 				</ul>
 				<div class="clearfix"> </div>
 			 </div>
 			 <!---->
 			<!--<div class="cart box_1">
-				 <a href="checkout.html">
+				 <a href="checkout.php">
 					<h3> <div class="total">
 					<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)</div>
 					<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></h3>
@@ -126,7 +126,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="contact">
 	  <div class="container">
 		 <ol class="breadcrumb">
-		  <li><a href="index.html">Home</a></li>
+		  <li><a href="index.php">Home</a></li>
 		  <li class="active">Contact</li>
 		 </ol>
 			<!---start-contact---->
@@ -163,22 +163,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>				
 				<div class="col-md-6 span_2_of_3">
 				  <div class="contact-form">
-					    <form>
+					    <form method="POST" action="submit_contact.php">
 					    	<div>
 						    	<span><label>NAME</label></span>
-						    	<span><input name="userName" type="text" class="textbox"></span>
+						    	<span><input name="userName" type="text" required="" class="textbox"></span>
 						    </div>
 						    <div>
 						    	<span><label>E-MAIL</label></span>
-						    	<span><input name="userEmail" type="text" class="textbox"></span>
+						    	<span><input name="userEmail" type="text" required="" class="textbox"></span>
 						    </div>
 						    <div>
 						     	<span><label>MOBILE</label></span>
-						    	<span><input name="userPhone" type="text" class="textbox"></span>
+						    	<span><input name="userPhone" type="text" required="" class="textbox"></span>
 						    </div>
 						    <div>
 						    	<span><label>SUBJECT</label></span>
-						    	<span><textarea name="userMsg"> </textarea></span>
+						    	<span><textarea name="userMsg" required=""> </textarea></span>
 						    </div>
 						   <div>
 						   		<span><input type="submit" class="mybutton" value="Submit"></span>
@@ -214,53 +214,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="footer">
 	 <div class="container">
 		 <div class="ftr-grids">
-			 <div class="col-md-3 ftr-grid">
-				 <h4>About Us</h4>
+			 <div class="col-md-4 ftr-grid">
+				 <h4>Lazos Karma</h4>
 				 <ul>
-					 <li><a href="#">Who We Are</a></li>
-					 <li><a href="contact.html">Contact Us</a></li>
-					 <li><a href="#">Our Sites</a></li>
-					 <li><a href="#">In The News</a></li>
-					 <li><a href="#">Team</a></li>
-					 <li><a href="#">Careers</a></li>					 
+					 <li><a href="index.php">Home</a></li>
+					 <li><a href="about.php">About Us</a></li>
+					 <li><a href="contact.php">Contact Us</a></li>
+					 <li><a href="https://www.facebook.com/lazoskarma/">Find on Facebok</a></li>
+					 
 				 </ul>
 			 </div>
-			 <div class="col-md-3 ftr-grid">
-				 <h4>Customer service</h4>
+			 <div class="col-md-4 ftr-grid">
+				 <h4>Our Products</h4>
 				 <ul>
-					 <li><a href="#">FAQ</a></li>
-					 <li><a href="#">Shipping</a></li>
-					 <li><a href="#">Cancellation</a></li>
-					 <li><a href="#">Returns</a></li>
-					 <li><a href="#">Bulk Orders</a></li>
-					 <li><a href="#">Buying Guides</a></li>					 
+					 <li><a href="kurta.php">Kurta</a></li>
+					 <li><a href="mokhu.php">Mokhu</a></li>
+					 <li><a href="jacket.php">Jacket</a></li>
+					 <li><a href="jacket_kurta.php">Jacket-Kurta</a></li>
+					 <li><a href="semi_indo.php">Semi Indo-Western</a></li>					 
 				 </ul>
 			 </div>
-			 <div class="col-md-3 ftr-grid">
-				 <h4>Your account</h4>
+			 
+			 <div class="col-md-4 ftr-grid">
+				 <h4>Find Us here</h4>
 				 <ul>
-					 <li><a href="account.html">Your Account</a></li>
-					 <li><a href="#">Personal Information</a></li>
-					 <li><a href="#">Addresses</a></li>
-					 <li><a href="#">Discount</a></li>
-					 <li><a href="#">Track your order</a></li>					 					 
-				 </ul>
-			 </div>
-			 <div class="col-md-3 ftr-grid">
-				 <h4>Categories</h4>
-				 <ul>
-					 <li><a href="#">> Wedding</a></li>
-					 <li><a href="#">> Jewellerys</a></li>
-					 <li><a href="#">> Shoes</a></li>
-					 <li><a href="#">> Flowers</a></li>
-					 <li><a href="#">> Cakes</a></li>
-					 <li><a href="#">...More</a></li>					 
+					 <p>Heritage India (Lazos Karma)</p>
+								<p>26 Shreeji Industrial Estate,</p>
+								<p>Subhash Road,</p> 
+								<p>Jogeshwari East,</p> 
+								<p>Mumbai-400 060.</p>
+					 
 				 </ul>
 			 </div>
 			 <div class="clearfix"></div>
 		 </div>		
 	 </div>
 </div>
+
 <!---->
  <div class="copywrite">
 	 <div class="container">

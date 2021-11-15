@@ -55,10 +55,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="logo">
 					<a href="index.php"><h1>Lazos Karma</h1></a>
 				</div>
-
+			 <!---->
 		 
 			 <div class="top-nav">
-				<ul class="memenu skyblue"><li class="active"><a href="index.php">Home</a></li>
+				<ul class="memenu skyblue"><li class="grid"><a href="index.php">Home</a></li>
 					<li class="grid"><a>Our Products</a>
 						<div class="mepanel">
 							<div class="row">
@@ -101,12 +101,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 						</div>
 					</li>
-					<li class="grid"><a href="about.php">About Us</a></li>
+					<li class="active"><a href="about.php">About Us</a></li>
 					<li class="grid"><a href="contact.php">Contact</a></li>
 				</ul>
 				<div class="clearfix"> </div>
 			 </div>
-
+			 <!---->
 			<!--<div class="cart box_1">
 				 <a href="checkout.php">
 					<h3> <div class="total">
@@ -117,24 +117,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			 	<div class="clearfix"> </div>
 			 </div>-->
 			 <div class="clearfix"> </div>
-
+			 <!---->			 
 			 </div>
 			<div class="clearfix"> </div>
 	  </div>
 </div>
-<!--end header-->
-<div class="banner">
-	 <div class="container">
-	 </div>
-</div>
-
+<!--end header--><!---->
 <div class="welcome">
 	 <div class="container">
 		 <div class="col-md-4 welcome-left">
-			 <h2>About<br>Lazos Karma</h2>
+			 <div class="content-grid l-grids">
+						<img src="images/lazoscover.png" alt="" style="height:403px;"/>
+			 </div>
 		 </div>
 		 <div class="col-md-8 welcome-right">
-			 <h3>Welcome To Our Site</h3>
+			 <h3>Welcome To Lazos Karma</h3>
 			 <p>Etiam fermentum consectetur nulla, sit amet dapibus orci sollicitudin vel. 
 			 Nulla consequat turpis in molestie fermentum. In ornare, tellus non interdum ultricies, elit 
 			 ex lobortis ex, aliquet accumsan arcu tortor in leo. Nullam molestie elit enim. Donec ac 
@@ -143,7 +140,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	 </div>
 </div>
 
-<div class="bride-grids">
+
+<div class="container">
+<div class="sofaset-info">
+		 <h4>Product Summary: American Diamond Famina Ruby Copper, Brass Jewel Set</h4>
+		 <ul>
+				 <li>Classic and vibrant detailing</li>	
+				 <li>Design: Exquisitely crafted necklace set to suit your festive mood</li>
+				 <li>Stones Used: Synthetic stones and beads</li>
+				 <li>Colour: Brown Jute, Sheron Brown</li>
+				 <li>Recommended Wear: Festive</li>
+				 <li>Note: The image has been enlarged for better viewing</li>
+				 <li>Contents: 4 Pc</li>
+				 <li>Delivery Time: 7 to 10 days from the Day of Dispatch</li>							 
+		 </ul>
+</div>
+</div>
+				  
+				  
+				  
+				  
+				  
+<!---->
+<!--<div class="bride-grids">
 	 <div class="container">
 		 <div class="col-md-4 bride-grid">
 			 <div class="content-grid l-grids">
@@ -155,7 +174,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</figcaption>			
 				 </figure>
 				 <div class="clearfix"></div>
-				 <h3><center><a href="kurta.php">Kurta</a></center></h3>
+				 <h3><center>Kurta</center></h3>
 			 </div>
 			 <div class="content-grid l-grids">
 				 <figure class="effect-bubba">
@@ -166,7 +185,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</figcaption>			
 				 </figure>	
 				 <div class="clearfix"></div>
-				 <h3><center><a href="mokhu.php">Mokhu</a></center></h3>
+				 <h3><center>Mokhu</center></h3>
 			 </div>
 		 </div>
 		 <div class="col-md-4 bride-grid">
@@ -179,7 +198,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</figcaption>			
 				 </figure>	
 				 <div class="clearfix"></div>
-				 <h3><center><a href="semi_indo.php">Semi Indo-Western</a></center></h3>
+				 <h3><center>Semi Indo-Western</center></h3>
 			 </div>
 		 </div>
 		 <div class="col-md-4 bride-grid">
@@ -192,7 +211,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</figcaption>			
 				 </figure>	
 				 <div class="clearfix"></div>
-				 <h3><center><a href="jacket.php">Jackets</a></center></h3>
+				 <h3><center>Jackets</center></h3>
 			 </div>
 			 <div class="content-grid l-grids">
 				 <figure class="effect-bubba">
@@ -203,358 +222,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</figcaption>			
 				 </figure>
 					<div class="clearfix"></div>
-				 <h3><center><a href="jacket_kurta.php">Jacket-Kurta</a></center></h3>
+				 <h3><center>Jacket Kurta</center></h3>
 			 </div>
 		 </div>
 		 <div class="clearfix"></div>
 	 </div>
 </div>
+<!---->
 
-<?php
-	include "config.php";	  
-	if(!$conn)
-	{
-		echo "Error : ".mysql_error($conn);      //display error if connetion is not set
-	}
-	
-	//Part 1
-	else
-	{
-		
-
-?>
-
-<!--Kurta Start-->
-				<div class="featured">
-					<div class="container">
-						<h3><a href="kurta.php">Kurta</a></h3>
-						<div class="feature-grids">
-						 
-						 <!--Cards Start-->
-						 <?php 
-						 
-						 
-						 
-						 $sql = "SELECT * FROM product where TYPE='kurta' ORDER BY RAND() LIMIT 3";
-		$result = $conn->query($sql);
-
-		if ($result->num_rows > 0) 
-		{
-			// output data of each row
-		
-			while($row = $result->fetch_assoc()) 
-			{
-				/*
-					display results according to 
-					"Filtered Value Of Column : ID"
-					Stored in Array Named $Value
-				*/
-				$target=$row["code"];
-				$target='products/'.$target.'.jpg'; //image location
-
-						 
-						 
-							
-						 ?>
-						 <div class="col-md-4 feature-grid jewel">
-							 <a href="product.php"><img src="<?php echo $target;?>" alt=""/>	
-								 <div class="arrival-info">
-									 <h3>Code:<?php echo $row["code"];?></h3>
-									 <p>Rs.<?php echo $row["price"];?></p>
-								 </div>
-								 <div class="viw">
-									<form action="single.php" method="POST">
-							
-							<button class="btns" value="<?php echo $row["id"];?>" name="buy_product_id"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
-							
-							</form>
-								 </div>
-						 </div>						 
-<?php 
-			}
-		}
-	
-?>
-<!--Cards End-->
-			 <div class="clearfix"></div>
-		 </div>
-	 </div>
-</div>
-
-<!--Kurta End-->
-
-
-
-
-
-
-
-
-<!--Jacket Start-->
-				<div class="featured">
-					<div class="container">
-						<h3><a href="jacket.php">Jacket</a></h3>
-						<div class="feature-grids">
-						 
-						 <!--Cards Start-->
-						 <?php 
-						 
-						 
-						 
-						 $sql = "SELECT * FROM product where TYPE='jacket' ORDER BY RAND() LIMIT 3";
-		$result = $conn->query($sql);
-
-		if ($result->num_rows > 0) 
-		{
-			// output data of each row
-		
-			while($row = $result->fetch_assoc()) 
-			{
-				/*
-					display results according to 
-					"Filtered Value Of Column : ID"
-					Stored in Array Named $Value
-				*/
-				$target=$row["code"];
-				$target='products/'.$target.'.jpg'; //image location
-
-						 
-						 
-							
-						 ?>
-						 <div class="col-md-4 feature-grid jewel">
-							 <a href="product.php"><img src="<?php echo $target;?>" alt=""/>	
-								 <div class="arrival-info">
-									 <h3>Code:<?php echo $row["code"];?></h3>
-									 <p>Rs.<?php echo $row["price"];?></p>
-								 </div>
-								 <div class="viw">
-									<form action="single.php" method="POST">
-							
-							<button class="btns" value="<?php echo $row["id"];?>" name="buy_product_id"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
-							
-							</form>
-								 </div>
-								 <div class="shrt">
-									<a href="product.php"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
-								 </div></a>
-						 </div>						 
-<?php 
-			}
-		}
-	
-?>
-<!--Cards End-->
-			 <div class="clearfix"></div>
-		 </div>
-	 </div>
-</div>
-
-<!--Jacket End-->
-
-
-
-
-
-
-
-<!--Mohku Start-->
-				<div class="featured">
-					<div class="container">
-						<h3><a href="mohku.php">Mohku</a></h3>
-						<div class="feature-grids">
-						 
-						 <!--Cards Start-->
-						 <?php 
-						 
-						 
-						 
-						 $sql = "SELECT * FROM product where TYPE='mokhu' ORDER BY RAND() LIMIT 3";
-		$result = $conn->query($sql);
-
-		if ($result->num_rows > 0) 
-		{
-			// output data of each row
-		
-			while($row = $result->fetch_assoc()) 
-			{
-				/*
-					display results according to 
-					"Filtered Value Of Column : ID"
-					Stored in Array Named $Value
-				*/
-				$target=$row["code"];
-				$target='products/'.$target.'.jpg'; //image location
-
-						 
-						 
-							
-						 ?>
-						 <div class="col-md-4 feature-grid jewel">
-							 <a href="product.php"><img src="<?php echo $target;?>" alt=""/>	
-								 <div class="arrival-info">
-									 <h3>Code:<?php echo $row["code"];?></h3>
-									 <p>Rs.<?php echo $row["price"];?></p>
-								 </div>
-								 <div class="viw">
-									<form action="single.php" method="POST">
-							
-							<button class="btns" value="<?php echo $row["id"];?>" name="buy_product_id"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
-							
-							</form>
-								 </div>
-								 <div class="shrt">
-									<a href="product.php"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
-								 </div></a>
-						 </div>						 
-<?php 
-			}
-		}
-	
-?>
-<!--Cards End-->
-			 <div class="clearfix"></div>
-		 </div>
-	 </div>
-</div>
-
-<!--Mohku End-->
-
-
-
-<!--Jacket Kurta Start-->
-				<div class="featured">
-					<div class="container">
-						<h3><a href="jacket_kurta.php">Jacket-Kurta</a></h3>
-						<div class="feature-grids">
-						 
-						 <!--Cards Start-->
-						 <?php 
-						 
-						 
-						 
-						 $sql = "SELECT * FROM product where TYPE='jacket_kurta' ORDER BY RAND() LIMIT 3";
-		$result = $conn->query($sql);
-
-		if ($result->num_rows > 0) 
-		{
-			// output data of each row
-		
-			while($row = $result->fetch_assoc()) 
-			{
-				/*
-					display results according to 
-					"Filtered Value Of Column : ID"
-					Stored in Array Named $Value
-				*/
-				$target=$row["code"];
-				$target='products/'.$target.'.jpg'; //image location
-
-						 
-						 
-							
-						 ?>
-						 <div class="col-md-4 feature-grid jewel">
-							 <a href="product.php"><img src="<?php echo $target;?>" alt=""/>	
-								 <div class="arrival-info">
-									 <h3>Code:<?php echo $row["code"];?></h3>
-									 <p>Rs.<?php echo $row["price"];?></p>
-								 </div>
-								 <div class="viw">
-									<form action="single.php" method="POST">
-							
-							<button class="btns" value="<?php echo $row["id"];?>" name="buy_product_id"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
-							
-							</form>
-								 </div>
-								 <div class="shrt">
-									<a href="product.php"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
-								 </div></a>
-						 </div>						 
-<?php 
-			}
-		}
-	
-?>
-<!--Cards End-->
-			 <div class="clearfix"></div>
-		 </div>
-	 </div>
-</div>
-
-<!--Jacket-Kurta End-->
-
-
-
-
-<!--Semi Indo-Western Start-->
-				<div class="featured">
-					<div class="container">
-						<h3><a href="indo.php">Semi Indo-Western</a></h3>
-						<div class="feature-grids">
-						 
-						 <!--Cards Start-->
-						 <?php 
-						 
-						 
-						 
-						 $sql = "SELECT * FROM product where TYPE='indo' ORDER BY RAND() LIMIT 3";
-		$result = $conn->query($sql);
-
-		if ($result->num_rows > 0) 
-		{
-			// output data of each row
-		
-			while($row = $result->fetch_assoc()) 
-			{
-				/*
-					display results according to 
-					"Filtered Value Of Column : ID"
-					Stored in Array Named $Value
-				*/
-				$target=$row["code"];
-				$target='products/'.$target.'.jpg'; //image location
-
-						 
-						 
-							
-						 ?>
-						 <div class="col-md-4 feature-grid jewel">
-							 <a href="product.php"><img src="<?php echo $target;?>" alt=""/>	
-								 <div class="arrival-info">
-									 <h3>Code:<?php echo $row["code"];?></h3>
-									 <p>Rs.<?php echo $row["price"];?></p>
-								 </div>
-								 <div class="viw">
-									<form action="single.php" method="POST">
-							
-							<button class="btns" value="<?php echo $row["id"];?>" name="buy_product_id"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
-							
-							</form>
-								 </div>
-								 <div class="shrt">
-									<a href="product.php"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
-								 </div></a>
-						 </div>						 
-<?php 
-			}
-		}
-	}
-?>
-<!--Cards End-->
-			 <div class="clearfix"></div>
-		 </div>
-	 </div>
-</div>
-
-<!--Semi Indo Western End-->
-
-
-
-
-
-
-
+<!---->
 
 <div class="shoping">
 	 <div class="container">
@@ -615,6 +291,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		 </div>		
 	 </div>
 </div>
+
 <!---->
  <div class="copywrite">
 	 <div class="container">

@@ -13,7 +13,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script src="js/jquery.min.js"></script>
 <!-- Custom Theme files -->
 <!--theme-style-->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<link href="css/style1.css" rel="stylesheet" type="text/css" media="all" />	
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -59,7 +59,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		 
 			 <div class="top-nav">
 				<ul class="memenu skyblue"><li class="grid"><a href="index.html">Home</a></li>
-					<li class="grid"><a href="#">Our Products</a>
+					<li class="active"><a href="#">Our Products</a>
 						<div class="mepanel">
 							<div class="row">
 								<div class="col1 me-one">
@@ -101,7 +101,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 						</div>
 					</li>
-					<li class="active"><a href="about.html">About Us</a></li>
+					<li class="grid"><a href="about.html">About Us</a></li>
 					<li class="grid"><a href="contact.html">Contact</a></li>
 				</ul>
 				<div class="clearfix"> </div>
@@ -123,125 +123,171 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	  </div>
 </div>
 <!--end header--><!---->
-<div class="welcome">
+<div class="product-model">	 
 	 <div class="container">
-		 <div class="col-md-4 welcome-left">
-			 <div class="content-grid l-grids">
-						<img src="images/lazoscover.png" alt="" style="height:403px;"/>
-			 </div>
-		 </div>
-		 <div class="col-md-8 welcome-right">
-			 <h3>Welcome To Lazos Karma</h3>
-			 <p>Etiam fermentum consectetur nulla, sit amet dapibus orci sollicitudin vel. 
-			 Nulla consequat turpis in molestie fermentum. In ornare, tellus non interdum ultricies, elit 
-			 ex lobortis ex, aliquet accumsan arcu tortor in leo. Nullam molestie elit enim. Donec ac 
-			 aliquam quam, ac iaculis diam. Donec finibus scelerisque erat, non convallis felis commodo ac.</p>
-		 </div>
-	 </div>
-</div>
+			<ol class="breadcrumb">
+		  <li><a href="index.html">Home</a></li>
+		  <li class="active">Products</li>
+		 </ol>
+			<h2>Our Products</h2>			
+		 <div class="col-md-9 product-model-sec">
+		 <?php
+	include "config.php";	  
+	if(!$conn)
+	{
+		echo "Error : ".mysql_error($conn);      //display error if connetion is not set
+	}
+	
+	//Part 1
+	else
+	{
+		
 
+?>
+		 <!-- card start -->
+		 
+		 
+		 
+		 
+		 
+		 <?php 
+						 
+						 
+						 
+						 $sql = "SELECT * FROM product where TYPE='jacket'";
+		$result = $conn->query($sql);
 
-<div class="container">
-<div class="sofaset-info">
-		 <h4>Product Summary: American Diamond Famina Ruby Copper, Brass Jewel Set</h4>
-		 <ul>
-				 <li>Classic and vibrant detailing</li>	
-				 <li>Design: Exquisitely crafted necklace set to suit your festive mood</li>
-				 <li>Stones Used: Synthetic stones and beads</li>
-				 <li>Colour: Brown Jute, Sheron Brown</li>
-				 <li>Recommended Wear: Festive</li>
-				 <li>Note: The image has been enlarged for better viewing</li>
-				 <li>Contents: 4 Pc</li>
-				 <li>Delivery Time: 7 to 10 days from the Day of Dispatch</li>							 
-		 </ul>
-</div>
-</div>
-				  
-				  
-				  
-				  
-				  
-<!---->
-<!--<div class="bride-grids">
-	 <div class="container">
-		 <div class="col-md-4 bride-grid">
-			 <div class="content-grid l-grids">
-				 <figure class="effect-bubba">
-						<img src="images/1.jpg" alt=""/>
-						<figcaption>
-							<h4>Nullam molestie </h4>
-							<p>In sit amet sapien eros Integer in tincidunt labore et dolore magna aliqua</p>																
-						</figcaption>			
-				 </figure>
-				 <div class="clearfix"></div>
-				 <h3><center>Kurta</center></h3>
-			 </div>
-			 <div class="content-grid l-grids">
-				 <figure class="effect-bubba">
-						<img src="images/2.jpg" alt=""/>
-						<figcaption>
-							<h4>Nullam molestie </h4>
-							<p>In sit amet sapien eros Integer in tincidunt labore et dolore magna aliqua</p>																
-						</figcaption>			
-				 </figure>	
-				 <div class="clearfix"></div>
-				 <h3><center>Mokhu</center></h3>
-			 </div>
-		 </div>
-		 <div class="col-md-4 bride-grid">
-				<div class="content-grid l-grids">
-				 <figure class="effect-bubba">
-						<img src="images/3.jpg" alt=""/>
-						<figcaption>
-							<h4>Nullam molestie </h4>
-							<p>In sit amet sapien eros Integer in tincidunt labore et dolore magna aliqua</p>																
-						</figcaption>			
-				 </figure>	
-				 <div class="clearfix"></div>
-				 <h3><center>Semi Indo-Western</center></h3>
-			 </div>
-		 </div>
-		 <div class="col-md-4 bride-grid">
-			 <div class="content-grid l-grids">
-				 <figure class="effect-bubba">
-						<img src="images/4.jpg" alt=""/>
-						<figcaption>
-							<h4>Nullam molestie </h4>
-							<p>In sit amet sapien eros Integer in tincidunt labore et dolore magna aliqua</p>																
-						</figcaption>			
-				 </figure>	
-				 <div class="clearfix"></div>
-				 <h3><center>Jackets</center></h3>
-			 </div>
-			 <div class="content-grid l-grids">
-				 <figure class="effect-bubba">
-						<img src="images/5.jpg" alt=""/>
-						<figcaption>
-							<h4>Nullam molestie </h4>
-							<p>In sit amet sapien eros Integer in tincidunt labore et dolore magna aliqua</p>																
-						</figcaption>			
-				 </figure>
-					<div class="clearfix"></div>
-				 <h3><center>Jacket Kurta</center></h3>
-			 </div>
-		 </div>
-		 <div class="clearfix"></div>
-	 </div>
-</div>
-<!---->
+		if ($result->num_rows > 0) 
+		{
+			// output data of each row
+		
+			while($row = $result->fetch_assoc()) 
+			{
+				/*
+					display results according to 
+					"Filtered Value Of Column : ID"
+					Stored in Array Named $Value
+				*/
+				$target=$row["code"];
+				$target='products/'.$target.'.jpg'; //image location
 
-<!---->
-
+						 
+						 
+							
+						 ?>
+		 
+		 
+		 
+		 
+					 <div class="product-grid love-grid">
+						<div class="more-product"><span> </span></div>						
+						<div class="product-img b-link-stripe b-animate-go  thickbox">
+							<img src="<?php echo $target;?>" class="img-responsive" alt=""/>
+							<div class="b-wrapper">
+							<h4 class="b-animate b-from-left  b-delay03">
+							
+							
+							
+							
+							
+							<form action="single.php" method="POST">
+							
+							<button class="btns" value="<?php echo $row["id"];?>" name="buy_product_id"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
+							
+							</form>
+							
+							
+							
+							
+							
+							</h4>
+							</div>
+						</div>						
+						<div class="product-info simpleCart_shelfItem">
+							<div class="product-info-cust prt_name">
+								<h4>Code:<?php echo $row["code"];?></h4>
+								
+								<span class="item_price">Rs.<?php echo $row["price"];?></span>								
+								
+								<!--<button type="submit" class="item_add items" value="<//?php echo $row["id"];?>">Buy</button>-->
+							</div>													
+							<div class="clearfix"> </div>
+						</div>
+					</div>	
+		<!-- card end -->
+		
+		<?php 
+			}
+		}
+	}
+?>
+					 
+			</div>
+			<div class="rsidebar span_1_of_left">
+				<section  class="sky-form">
+					 	<div class="product_right">
+						 <h4 class="m_2"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Categories</h4>
+						 <div class="tab1">
+							 <ul class="place">								
+								 <li class="sort"><a href="kurta.php">Kurta</a></li>
+								 
+									<div class="clearfix"> </div>
+							  </ul>
+							 
+					      </div>						  
+						  <div class="tab2">
+							 <ul class="place">								
+								 <li class="sort"><a href="mokhu.php">Mokhu</li>
+								 
+									<div class="clearfix"> </div>
+							  </ul>
+							 
+					      </div>
+						  <div class="tab3">
+							 <ul class="place">								
+								 <li class="sort"><a href="jacket.php">Jacket</a></li>
+								 
+									<div class="clearfix"> </div>
+							  </ul>
+							 
+					      </div>
+						  <div class="tab4">
+							 <ul class="place">								
+								 <li class="sort"><a href="jacket_kurta.php">Jacket-kurta</a></li>
+								 
+									<div class="clearfix"> </div>
+							  </ul>
+							
+					      </div>
+						  <div class="tab5">
+							 <ul class="place">								
+								 <li class="sort"><a href="semi_indo.php">Semi Indo-Western</a></li>
+								 
+									<div class="clearfix"> </div>
+							  </ul>
+							 
+					      </div>
+						  <!--script-->
+						
+						<!-- script -->					 
+				 </section>
+				 			
+			 </div> 
+		     <div class="clearfix"></div>
+	  </div>				 
+	      </div>
+		</div>
+</div>
 <div class="shoping">
 	 <div class="container">
 		 <div class="shpng-grids">
 			 <div class="col-md-4 shpng-grid">
 				 <h3>Free Shipping</h3>
-				 <p>All Over India</p>
+				 <p>On Order Over Rs999</p>
 			 </div>
 			 <div class="col-md-4 shpng-grid">
-				 <h3>No Return</h3>
-				 <p>Order won't be returned</p>
+				 <h3>Order Return</h3>
+				 <p>Return Within 14days</p>
 			 </div>
 			 <div class="col-md-4 shpng-grid">
 				 <h3>COD</h3>
@@ -256,48 +302,47 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	 <div class="container">
 		 <div class="ftr-grids">
 			 <div class="col-md-4 ftr-grid">
-				 <h4>About Us</h4>
+				 <h4>Lazos Karma</h4>
 				 <ul>
-					 <li><a href="#">Who We Are</a></li>
-					 <li><a href="contact.html">Contact Us</a></li>
-					 <li><a href="#">Our Sites</a></li>
-					 <li><a href="#">In The News</a></li>
-					 <li><a href="#">Team</a></li>
-					 <li><a href="#">Careers</a></li>					 
+					 <li><a href="index.php">Home</a></li>
+					 <li><a href="about.php">About Us</a></li>
+					 <li><a href="contact.php">Contact Us</a></li>
+					 <li><a href="https://www.facebook.com/lazoskarma/">Find on Facebok</a></li>
+					 
 				 </ul>
 			 </div>
 			 <div class="col-md-4 ftr-grid">
-				 <h4>Customer service</h4>
+				 <h4>Our Products</h4>
 				 <ul>
-					 <li><a href="#">FAQ</a></li>
-					 <li><a href="#">Shipping</a></li>
-					 <li><a href="#">Cancellation</a></li>
-					 <li><a href="#">Returns</a></li>
-					 <li><a href="#">Bulk Orders</a></li>
-					 <li><a href="#">Buying Guides</a></li>					 
+					 <li><a href="kurta.php">Kurta</a></li>
+					 <li><a href="mokhu.php">Mokhu</a></li>
+					 <li><a href="jacket.php">Jacket</a></li>
+					 <li><a href="jacket_kurta.php">Jacket-Kurta</a></li>
+					 <li><a href="semi_indo.php">Semi Indo-Western</a></li>					 
 				 </ul>
 			 </div>
 			 
 			 <div class="col-md-4 ftr-grid">
-				 <h4>Categories</h4>
+				 <h4>Find Us here</h4>
 				 <ul>
-					 <li><a href="#">> Wedding</a></li>
-					 <li><a href="#">> Jewellerys</a></li>
-					 <li><a href="#">> Shoes</a></li>
-					 <li><a href="#">> Flowers</a></li>
-					 <li><a href="#">> Cakes</a></li>
-					 <li><a href="#">...More</a></li>					 
+					 <p>Heritage India (Lazos Karma)</p>
+								<p>26 Shreeji Industrial Estate,</p>
+								<p>Subhash Road,</p> 
+								<p>Jogeshwari East,</p> 
+								<p>Mumbai-400 060.</p>
+					 
 				 </ul>
 			 </div>
 			 <div class="clearfix"></div>
 		 </div>		
 	 </div>
 </div>
+
 <!---->
  <div class="copywrite">
 	 <div class="container">
 			 <p>Copyright © 2015 Wedding Store. All Rights Reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
 		 </div>
-</div>		 
+</div>	
 </body>
 </html>

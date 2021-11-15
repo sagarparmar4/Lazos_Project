@@ -35,14 +35,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="header_top-sec">
 			<div class="top_right">
 				<ul>
-					<li><a href="about.html">About</a></li>|
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="about.php">About</a></li>|
+					<li><a href="contact.php">Contact</a></li>
 				</ul>
 			</div>
 			<div class="top_left">
 				<ul>
 					<li class="top_link">Email:<a href="mailto:info@example.com">lazoskarma@gmail.com</a></li>
-					<!--<li class="top_link"><a href="login.html">My Account</a></li>-->					
+					<!--<li class="top_link"><a href="login.php">My Account</a></li>-->					
 				</ul>
 			</div>
 				<div class="clearfix"> </div>
@@ -53,62 +53,62 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	 <div class="header-bottom">
 		 <div class="container">			
 				<div class="logo">
-					<a href="index.html"><h1>Lazos Karma</h1></a>
+					<a href="index.php"><h1>Lazos Karma</h1></a>
 				</div>
 			 <!---->
 		 
 			 <div class="top-nav">
-				<ul class="memenu skyblue"><li class="grid"><a href="index.html">Home</a></li>
+				<ul class="memenu skyblue"><li class="grid"><a href="index.php">Home</a></li>
 					<li class="active"><a href="#">Our Products</a>
 						<div class="mepanel">
 							<div class="row">
 								<div class="col1 me-one">
 									<!--<h4>Shop</h4>-->
 									<ul>
-										<li><a href="kurta.html">Kurta</a></li>
-										<li><a href="mokhu.html">Mokhu</a></li>
-										<li><a href="jacket.html">Jacket</a></li>
-										<li><a href="jacket_kurta.html">Jacket-kurta</a></li>
-										<li><a href="semi_indo.html">Semi Indo-Western</a></li>
+										<li><a href="kurta.php">Kurta</a></li>
+										<li><a href="mokhu.php">Mokhu</a></li>
+										<li><a href="jacket.php">Jacket</a></li>
+										<li><a href="jacket_kurta.php">Jacket-kurta</a></li>
+										<li><a href="semi_indo.php">Semi Indo-Western</a></li>
 										
 									</ul>
 								</div>
 								<!--<div class="col1 me-one">
 									<h4>Style Zone</h4>
 									<ul>
-										<li><a href="product.html">Men</a></li>
-										<li><a href="product.html">Women</a></li>
-										<li><a href="product.html">Brands</a></li>
-										<li><a href="product.html">Kids</a></li>
-										<li><a href="product.html">Accessories</a></li>
-										<li><a href="product.html">Style Videos</a></li>
+										<li><a href="product.php">Men</a></li>
+										<li><a href="product.php">Women</a></li>
+										<li><a href="product.php">Brands</a></li>
+										<li><a href="product.php">Kids</a></li>
+										<li><a href="product.php">Accessories</a></li>
+										<li><a href="product.php">Style Videos</a></li>
 									</ul>	
 								</div>
 								<div class="col1 me-one">
 									<h4>Popular Brands</h4>
 									<ul>
-										<li><a href="product.html">Levis</a></li>
-										<li><a href="product.html">Persol</a></li>
-										<li><a href="product.html">Nike</a></li>
-										<li><a href="product.html">Edwin</a></li>
-										<li><a href="product.html">New Balance</a></li>
-										<li><a href="product.html">Jack & Jones</a></li>
-										<li><a href="product.html">Paul Smith</a></li>
-										<li><a href="product.html">Ray-Ban</a></li>
-										<li><a href="product.html">Wood Wood</a></li>
+										<li><a href="product.php">Levis</a></li>
+										<li><a href="product.php">Persol</a></li>
+										<li><a href="product.php">Nike</a></li>
+										<li><a href="product.php">Edwin</a></li>
+										<li><a href="product.php">New Balance</a></li>
+										<li><a href="product.php">Jack & Jones</a></li>
+										<li><a href="product.php">Paul Smith</a></li>
+										<li><a href="product.php">Ray-Ban</a></li>
+										<li><a href="product.php">Wood Wood</a></li>
 									</ul>	
 								</div>-->
 							</div>
 						</div>
 					</li>
-					<li class="grid"><a href="about.html">About Us</a></li>
-					<li class="grid"><a href="contact.html">Contact</a></li>
+					<li class="grid"><a href="about.php">About Us</a></li>
+					<li class="grid"><a href="contact.php">Contact</a></li>
 				</ul>
 				<div class="clearfix"> </div>
 			 </div>
 			 <!---->
 			<!--<div class="cart box_1">
-				 <a href="checkout.html">
+				 <a href="checkout.php">
 					<h3> <div class="total">
 					<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)</div>
 					<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></h3>
@@ -123,36 +123,97 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	  </div>
 </div>
 <!--end header--><!---->
+
+
+
+<?php
+	include "config.php";	 	 
+	if(!$conn)
+	{
+		echo "Error : ".mysql_error($conn);      //display error if connetion is not set
+	}
+	
+	//Part 1
+	else
+	{
+		$id=$_POST["buy_product_id"];
+		$purchase_code=$id;
+		//echo "id : ".$ref;
+		$sql = "SELECT * FROM product WHERE id='$id'";
+		$result = $conn->query($sql);
+
+		if ($result->num_rows > 0) 
+		{
+			// output data of each row
+			while($row = $result->fetch_assoc()) 
+			{				
+				
+				$prod_type=$row["type"];
+		  
+				
+		?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="single-sec">
 	 <div class="container">
 		 <ol class="breadcrumb">
-			 <li><a href="index.html">Home</a></li>
-			 <li class="active">Products</li>
+			 <li><a href="index.php">Home</a></li>
+			 <li><a href="<?php echo $prod_type.'.php'; ?>">Products</a></li>
+			 <li class="active"><?php echo ucwords($prod_type);?></li>
 		 </ol>
 		 <!-- start content -->	
-		 <h3>American Diamond Famina Ruby Copper, Brass Jewel Set</h3>
+		 
+		 
+		 
+		 
+		 
+		 
+		 <h2><?php		echo ucwords($row["type"]);?> </h2>
 		 
 		 <div class="col-md-9 det">
 				 <div class="single_left">
 					 <div class="flexslider">
 							<ul class="slides">
-								<li data-thumb="images/s11.jpeg">
-									<img src="images/s11.jpeg" />
-								</li>
-								<li data-thumb="images/s22.jpeg">
-									<img src="images/s22.jpeg" />
-								</li>
-								<li data-thumb="images/s33.jpeg">
-									<img src="images/s33.jpeg" />
-								</li>
-								<li data-thumb="images/s44.jpeg">
-									<img src="images/s44.jpeg" />
+	<?php		
+				$target=$row["code"];
+				
+				$target='products/'.$target.'.jpg';
+?>
+								<li>
+									<img src="<?php echo $target;?>" />
+									
 								</li>
 							</ul>
+									
+									
 						</div>
 						<!-- FlexSlider -->
 						  <script defer src="js/jquery.flexslider.js"></script>
-						<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+						<link rel="stylesheet" href="css/flexsliderfinal.css" type="text/css" media="screen" />
 
 							<script>
 						// Can also be used with $(document).ready()
@@ -163,12 +224,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						  });
 						});
 						</script>
+						<h4>Product Code: <?php echo $row["code"]; ?></h3>
+									<h4>Price: Rs. <?php echo $row["price"]; ?></h3>
+									<h4>Product Type: <?php echo ucwords($row["type"]); ?></h3>
 				 </div>
+				 
 				  <div class="single-right">
 					 
-					 <div class="id"><h4>ID: SB2379</h4></div>
+					 
+					<?php  
+					  }
+					  }
 					  
-					  
+					  ?>
 					  <div class="single-bottom1">
 						
 						
@@ -218,18 +286,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="row">
         <div class="col-md-4">
             <div class="well well-sm">
-                <form>
-                <div class="row">
+                <form method="POST" action="submit_purchase.php">
+                <input type="hidden" name="purchaseCode" value="1000"/>
+				<div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="name">
                                 Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
+                            <input type="text" class="form-control" name="userName" placeholder="Enter name" required="required" />
                         </div>
 						<div class="form-group">
                             <label for="name">
                                 Phone No.</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter phone number" required="required" />
+                            <input type="text" class="form-control" name="userPhone" placeholder="Enter phone number" required="required" />
                         </div>
                         <div class="form-group">
                             <label for="email">
@@ -237,12 +306,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
                                 </span>
-                                <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
+                                <input type="email" class="form-control" name="userEmail" placeholder="Enter email" required="required" /></div>
                         </div>
 						<div class="form-group">
                             <label for="name">
                                 Address</label>
-                            <textarea name="message" id="message" class="form-control" rows="3" cols="25" required="required"
+                            <textarea name="userAddress" class="form-control" rows="3" cols="25" required="required"
                                 placeholder="Address"></textarea>
                         </div>
                         
@@ -256,8 +325,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
                     </div>-->
                     <div class="col-md-12">
-                        <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
-                            Confirm Purchase</button>
+					
+                        <input type="submit" class="btn btn-primary pull-right" value="Purchase"/>
                     </div>
                 </div>
                 </form>
@@ -305,13 +374,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			
 			<!---->
 		    </div>
-		  <div class="rsidebar span_1_of_left">
+		<div class="rsidebar span_1_of_left">
 				<section  class="sky-form">
 					 	<div class="product_right">
 						 <h4 class="m_2"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Categories</h4>
 						 <div class="tab1">
 							 <ul class="place">								
-								 <li class="sort">Kurta</li>
+								 <li class="sort"><a href="kurta.php">Kurta</a></li>
 								 
 									<div class="clearfix"> </div>
 							  </ul>
@@ -319,7 +388,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					      </div>						  
 						  <div class="tab2">
 							 <ul class="place">								
-								 <li class="sort">Mokhu</li>
+								 <li class="sort"><a href="mokhu.php">Mokhu</li>
 								 
 									<div class="clearfix"> </div>
 							  </ul>
@@ -327,7 +396,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					      </div>
 						  <div class="tab3">
 							 <ul class="place">								
-								 <li class="sort">Jacket</li>
+								 <li class="sort"><a href="jacket.php">Jacket</a></li>
 								 
 									<div class="clearfix"> </div>
 							  </ul>
@@ -335,7 +404,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					      </div>
 						  <div class="tab4">
 							 <ul class="place">								
-								 <li class="sort">Jacket-kurta</li>
+								 <li class="sort"><a href="jacket_kurta.php">Jacket-kurta</a></li>
 								 
 									<div class="clearfix"> </div>
 							  </ul>
@@ -343,13 +412,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					      </div>
 						  <div class="tab5">
 							 <ul class="place">								
-								 <li class="sort">Semi Indo-Western</li>
+								 <li class="sort"><a href="semi_indo.php">Semi Indo-Western</a></li>
 								 
 									<div class="clearfix"> </div>
 							  </ul>
 							 
 					      </div>
-						  
 						  <!--script-->
 						
 						<!-- script -->					 
@@ -372,65 +440,57 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <div class="container">
 
+
+
 		 <div class="arrivals">	
 		 <h3>Related Products</h3>
 		 <div class="arrival-grids">			 
 			 <ul id="flexiselDemo1">
+				 
+				 
+			<?php	 
+			$sql = "SELECT * FROM product WHERE type='$prod_type'";
+		$result = $conn->query($sql);
+
+		if ($result->num_rows > 0) 
+		{
+			// output data of each row
+			while($row = $result->fetch_assoc()) 
+			{
+				$target=$row["code"];
+				$target='products/'.$target.'.jpg';
+				?><a>
 				 <li>
-					 <a href="product.html"><img src="images/p2.jpg" alt=""/>	
+				 
+					 <img src="<?php echo $target;?>" alt="Image could not be displayed"/>	
 					 <div class="arrival-info">
-						 <h4>Jewellerys #1</h4>
-						 <p>Rs 12000</p>
-						 <span class="pric1"><del>Rs 18000</del></span>
-						 <span class="disc">[12% Off]</span>
+						 <h3>Code :<?php echo $row["code"];?></h3>
+						 <p>Rs.<?php echo $row["price"];?></p>
+						 <!--<span class="pric1"><del>Rs 18000</del></span>
+						 <span class="disc">[12% Off]</span>-->
 					 </div>
-					 <div class="viw">
-						<a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
-					 </div></a>				 
+					 <div class="viw"></a>
+					 
+				
+					 
+					 
+					 
+					 
+					 <form action="single.php" method="POST">
+						<button style="color: #00a0dc;
+    background-color: #eee;
+    border: 0;" value="<?php echo $row["id"];?>" name="buy_product_id"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</button>
+					 </form>
+					 </div>				 
 				 </li>
-				 <li>
-					 <a href="product.html"><img src="images/p3.jpg" alt=""/>
-						<div class="arrival-info">
-						 <h4>Jewellerys #1</h4>
-						 <p>Rs 14000</p>
-						 <span class="pric1"><del>Rs 15000</del></span>
-						 <span class="disc">[10% Off]</span>
-					 </div>
-					 <div class="viw">
-						<a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
-					 </div></a>						 
-				 </li>
-				 <li>
-					 <a href="product.html"><img src="images/p4.jpg" alt=""/>	
-						<div class="arrival-info">
-						 <h4>Jewellerys #1</h4>
-						 <p>Rs 4000</p>
-						 <span class="pric1"><del>Rs 8500</del></span>
-						 <span class="disc">[45% Off]</span>
-					 </div>
-					 <div class="viw">
-						<a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
-					 </div></a>						 
-				 </li>
-				 <li>
-				    <a href="product.html"> <img src="images/p5.jpg" alt=""/>	
-						<div class="arrival-info">
-						 <h4>Jewellerys #1</h4>
-						 <p>Rs 18000</p>
-						 <span class="pric1"><del>Rs 21000</del></span>
-						 <span class="disc">[8% Off]</span>
-					 </div>
-					 <div class="viw">
-						<a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
-					 </div></a>						 
-				 </li>
+	<?php }}}?>
 				</ul>
 				<script type="text/javascript">
 				 $(window).load(function() {			
 				  $("#flexiselDemo1").flexisel({
 					visibleItems: 4,
 					animationSpeed: 1000,
-					autoPlay: true,
+					autoPlay: false,
 					autoPlaySpeed: 3000,    		
 					pauseOnHover:true,
 					enableResponsiveBreakpoints: true,
@@ -487,53 +547,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="footer">
 	 <div class="container">
 		 <div class="ftr-grids">
-			 <div class="col-md-3 ftr-grid">
-				 <h4>About Us</h4>
+			 <div class="col-md-4 ftr-grid">
+				 <h4>Lazos Karma</h4>
 				 <ul>
-					 <li><a href="#">Who We Are</a></li>
-					 <li><a href="contact.html">Contact Us</a></li>
-					 <li><a href="#">Our Sites</a></li>
-					 <li><a href="#">In The News</a></li>
-					 <li><a href="#">Team</a></li>
-					 <li><a href="#">Careers</a></li>					 
+					 <li><a href="index.php">Home</a></li>
+					 <li><a href="about.php">About Us</a></li>
+					 <li><a href="contact.php">Contact Us</a></li>
+					 <li><a href="https://www.facebook.com/lazoskarma/">Find on Facebok</a></li>
+					 
 				 </ul>
 			 </div>
-			 <div class="col-md-3 ftr-grid">
-				 <h4>Customer service</h4>
+			 <div class="col-md-4 ftr-grid">
+				 <h4>Our Products</h4>
 				 <ul>
-					 <li><a href="#">FAQ</a></li>
-					 <li><a href="#">Shipping</a></li>
-					 <li><a href="#">Cancellation</a></li>
-					 <li><a href="#">Returns</a></li>
-					 <li><a href="#">Bulk Orders</a></li>
-					 <li><a href="#">Buying Guides</a></li>					 
+					 <li><a href="kurta.php">Kurta</a></li>
+					 <li><a href="mokhu.php">Mokhu</a></li>
+					 <li><a href="jacket.php">Jacket</a></li>
+					 <li><a href="jacket_kurta.php">Jacket-Kurta</a></li>
+					 <li><a href="semi_indo.php">Semi Indo-Western</a></li>					 
 				 </ul>
 			 </div>
-			 <div class="col-md-3 ftr-grid">
-				 <h4>Your account</h4>
+			 
+			 <div class="col-md-4 ftr-grid">
+				 <h4>Find Us here</h4>
 				 <ul>
-					 <li><a href="account.html">Your Account</a></li>
-					 <li><a href="#">Personal Information</a></li>
-					 <li><a href="#">Addresses</a></li>
-					 <li><a href="#">Discount</a></li>
-					 <li><a href="#">Track your order</a></li>					 					 
-				 </ul>
-			 </div>
-			 <div class="col-md-3 ftr-grid">
-				 <h4>Categories</h4>
-				 <ul>
-					 <li><a href="#">> Wedding</a></li>
-					 <li><a href="#">> Jewellerys</a></li>
-					 <li><a href="#">> Shoes</a></li>
-					 <li><a href="#">> Flowers</a></li>
-					 <li><a href="#">> Cakes</a></li>
-					 <li><a href="#">...More</a></li>					 
+					 <p>Heritage India (Lazos Karma)</p>
+								<p>26 Shreeji Industrial Estate,</p>
+								<p>Subhash Road,</p> 
+								<p>Jogeshwari East,</p> 
+								<p>Mumbai-400 060.</p>
+					 
 				 </ul>
 			 </div>
 			 <div class="clearfix"></div>
 		 </div>		
 	 </div>
 </div>
+
 <!---->
  <div class="copywrite">
 	 <div class="container">
